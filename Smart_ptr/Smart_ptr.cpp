@@ -41,7 +41,7 @@ explicit shared_ptr(T* rhs)
 	
 private:
 	T* m_ptr;
-volatile static	unsigned int m_counter;
+ static	unsigned int m_counter;
 	
 };
 
