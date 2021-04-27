@@ -3,10 +3,10 @@ template <typename T>
 class shared_ptr
 {
 public:
-explicit shared_ptr(T*)
+explicit shared_ptr(T* rhs)
 	:m_counter(0)
 { 
-	m_ptr = T;
+	m_ptr = rhs;
 	m_counter++;
 	}
 
@@ -40,7 +40,7 @@ explicit shared_ptr(T*)
 	}
 	
 private:
-	shared_ptr<T>* m_ptr;
+	T* m_ptr;
 volatile static	unsigned int m_counter;
 	
 };
